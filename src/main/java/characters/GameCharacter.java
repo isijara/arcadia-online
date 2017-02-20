@@ -9,10 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
+
 public abstract class GameCharacter {
 
     private String name;
     protected double baseAttack;
+
+
     protected Weapon equippedWeapon;
     protected List<Weapon> weaponSet = new ArrayList();
     protected List<Equipment> equipment = new ArrayList();
@@ -22,19 +25,26 @@ public abstract class GameCharacter {
     private int weaponLimit = 3;
     private double health;
 
-    public abstract void attack();
 
     public GameCharacter() {
         this.equippedWeapon = new Weaponless();
-        System.out.println("Currently weilding: " + this.equippedWeapon.toSring());
+        System.out.println("Currently weilding: " + this.equippedWeapon.toString());
     }
 
-    public void setName(String name) throws Exception {
-        if(this.name != null) {
-            throw new Exception("Name already defined. You can't change your character name");
-        } else {
-            this.name = name;
-        }
+    public double getAttackModifier() {
+        return this.equippedWeapon.getAttackModifier();
+    }
+
+    public Weapon getEquippedWeapon() {
+        return this.equippedWeapon;
+    }
+
+    public String getEquippedWeaponName() {
+        return this.equippedWeapon.getName();
+    }
+
+    public double getBaseAttack() {
+        return this.baseAttack;
     }
 
     public String getName() {
@@ -42,19 +52,17 @@ public abstract class GameCharacter {
     }
 
     public void pickWeapon(Weapon weapon) throws Exception {
-        if(this.weaponSet.size() == this.weaponLimit )
-            throw new Exception("You can't carry more items.items.weapons");
+        if(this.weaponSet.size() >= this.weaponLimit )
+            throw new Exception("You can't carry more weapons");
 
         this.weaponSet.add(weapon);
     }
 
     public double getTotalAttackPower() {
-        return this.getBaseAttack() * this.equippedWeapon.getAttackModifier() + this.equippedWeapon.getAttack();
+        return (this.getBaseAttack() * this.equippedWeapon.getAttackModifier())
+                + this.equippedWeapon.getAttack();
     }
 
-    public double getBaseAttack() {
-        return this.baseAttack;
-    }
 
     public final void setWeaponPolicy(WeaponPolicy weaponPolicy) {
         this.weaponPolicy = weaponPolicy;
@@ -66,15 +74,11 @@ public abstract class GameCharacter {
     }
 
     public void listWeapons() {
-
         System.out.println("Available weapons: ");
-
         IntStream.iterate(0, i -> i+1 )
                 .limit(this.weaponSet.size())
-                .forEach(item -> System.out.println((item+1)+ ".-" + this.weaponSet.get(item).toSring()));
-
+                .forEach(item -> System.out.println((item+1)+ ".-" + this.weaponSet.get(item).toString()));
     }
-
 
     public boolean validateWeapon(Weapon weapon) throws Exception{
         if(weaponPolicy == null) {
@@ -82,6 +86,14 @@ public abstract class GameCharacter {
         }
 
         return this.weaponPolicy.validateWeapon(weapon);
+    }
+
+    public void setName(String name) throws Exception {
+        if(this.name != null) {
+            throw new Exception("Name already defined. You can't change your character name");
+        } else {
+            this.name = name;
+        }
     }
 
 

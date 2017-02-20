@@ -2,7 +2,7 @@ package characters;
 
 import items.weapons.Weapon;
 
-public class Pawn extends GameCharacter {
+public class Pawn extends GameCharacter implements Attacker {
 
     @Override
     public void attack() {

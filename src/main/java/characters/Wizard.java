@@ -2,7 +2,7 @@ package characters;
 
 import characters.weaponPolicies.MagicWarriorWeaponPolicy;
 
-public class Wizard extends GameCharacter {
+public class Wizard extends GameCharacter implements Attacker {
 
     public Wizard() {
         this.setWeaponPolicy(new MagicWarriorWeaponPolicy());

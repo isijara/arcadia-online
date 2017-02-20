@@ -19,7 +19,7 @@ public abstract class Weapon {
     public abstract double getAttackModifier();
     public abstract String getName();
 
-    public String toSring() {
+    public String toString() {
         return this.getName() + " Atk: "+ this.getAttack();
     }
 }
