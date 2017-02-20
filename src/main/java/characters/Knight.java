@@ -6,6 +6,7 @@ public class Knight extends GameCharacter implements Attacker {
 
     public Knight() {
         this.setWeaponPolicy(new MeleeWarriorWeaponPolicy());
+        this.baseAttack = 150;
     }
 
     @Override
