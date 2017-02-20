@@ -4,9 +4,7 @@ import items.weapons.LongRangeWeapon;
 import items.weapons.MagicWeapon;
 import items.weapons.Weapon;
 
-/**
- * Created by proyectos on 13/05/16.
- */
+
 public class MeleeWarriorWeaponPolicy implements WeaponPolicy {
 
     public boolean validateWeapon(Weapon weapon) throws Exception {
