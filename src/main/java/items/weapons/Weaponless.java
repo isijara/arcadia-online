@@ -7,8 +7,8 @@ public class Weaponless extends Weapon {
 
     public Weaponless() {
         super();
-        //this.attackModifier = WeaponAttackModifier.NONE;
     }
+
     public Weaponless(String name, double attack) {
         super(name, 0, WeaponAttackModifier.NONE);
     }

@@ -2,7 +2,7 @@ package characters;
 
 import characters.weaponPolicies.MeleeWarriorWeaponPolicy;
 
-public class Knight extends GameCharacter {
+public class Knight extends GameCharacter implements Attacker {
 
     public Knight() {
         this.setWeaponPolicy(new MeleeWarriorWeaponPolicy());
