@@ -39,7 +39,6 @@ public class Game {
         GameCharacter knight = new Knight();
         GameCharacter commander = new Commander();
 
-
         game.demo(knight);
 
         System.out.println("\n\nDemo for Commander");
