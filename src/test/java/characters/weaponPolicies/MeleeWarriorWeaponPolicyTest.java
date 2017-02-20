@@ -1,6 +1,5 @@
 package characters.weaponPolicies;
 
-import characters.Archer;
 import characters.GameCharacter;
 import characters.Knight;
 import items.weapons.LongRangeWeapon;
@@ -10,9 +9,7 @@ import items.weapons.Weapon;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * Created by proyectos on 13/05/16.
- */
+
 public class MeleeWarriorWeaponPolicyTest {
 
     private GameCharacter melee;

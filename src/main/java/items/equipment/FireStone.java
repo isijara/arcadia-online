@@ -1,11 +1,8 @@
 package items.equipment;
 
-import characters.GameCharacter;
 import items.weapons.Weapon;
 
-/**
- * Created by Link on 20/02/17.
- */
+
 public class FireStone extends WeaponDecorator implements Equipment {
 
     private double attack = 45;

@@ -8,9 +8,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * Created by Link on 19/02/17.
- */
+
 public class CommanderTest {
 
     GameCharacter commander = new Commander();

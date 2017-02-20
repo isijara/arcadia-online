@@ -1,7 +1,6 @@
 package characters.weaponPolicies;
 
 import characters.GameCharacter;
-import characters.Knight;
 import characters.Wizard;
 import items.weapons.LongRangeWeapon;
 import items.weapons.MagicWeapon;

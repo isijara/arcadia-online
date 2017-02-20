@@ -2,7 +2,6 @@ package characters.weaponPolicies;
 
 import characters.Archer;
 import characters.GameCharacter;
-import characters.Wizard;
 import items.weapons.LongRangeWeapon;
 import items.weapons.MagicWeapon;
 import items.weapons.MeleeWeapon;
