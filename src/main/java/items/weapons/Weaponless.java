@@ -1,8 +1,6 @@
 package items.weapons;
 
-/**
- * Created by Link on 08/05/16.
- */
+
 public class Weaponless extends Weapon {
 
     private String name = "Weaponless";

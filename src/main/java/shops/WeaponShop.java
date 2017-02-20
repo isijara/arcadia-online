@@ -2,9 +2,6 @@ package shops;
 
 import items.Item;
 
-/**
- * Created by proyectos on 13/05/16.
- */
 public class WeaponShop implements Shop {
 
     @Override

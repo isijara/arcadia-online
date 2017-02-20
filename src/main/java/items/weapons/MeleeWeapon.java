@@ -1,8 +1,6 @@
 package items.weapons;
 
-/**
- * Created by proyectos on 13/05/16.
- */
+
 public class MeleeWeapon extends Weapon {
 
     public MeleeWeapon(String name, double attack) {

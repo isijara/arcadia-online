@@ -1,8 +1,5 @@
 package characters;
 
-/**
- * Created by proyectos on 13/05/16.
- */
 public class GameCharacterFactory {
 
     public GameCharacter create(String type) throws Exception{
