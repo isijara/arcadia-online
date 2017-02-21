@@ -1,14 +1,22 @@
 group 'arcadia'
 version '1.0-SNAPSHOT'
 
+
 apply plugin: 'java'
+apply plugin: "jacoco"
+apply plugin: 'eclipse'
+
+
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
+
     testCompile group: 'junit', name: 'junit', version: '4.11'
+
 }

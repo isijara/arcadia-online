@@ -31,6 +31,10 @@ public abstract class GameCharacter {
         System.out.println("Currently weilding: " + this.equippedWeapon.toString());
     }
 
+    public List<Weapon> getWeapons() {
+        return this.weaponSet;
+    }
+
     public double getAttackModifier() {
         return this.equippedWeapon.getAttackModifier();
     }
