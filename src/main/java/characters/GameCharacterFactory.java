@@ -2,24 +2,25 @@ package characters;
 
 public class GameCharacterFactory {
 
-    public GameCharacter create(String type) throws Exception{
+    public GameCharacter create(String type) throws Exception {
 
-        if( type.equals(GameCharacterClass.KNIGHT.toString()))
-            return new Knight();
-        else if (type.equals(GameCharacterClass.COMMANDER.toString()))
-            return new Commander();
-        else if (type.equals(GameCharacterClass.TROLL.toString()))
-            return new Troll();
-        if( type.equals(GameCharacterClass.ARCHER.toString()))
-            return new Archer();
-        else if (type.equals(GameCharacterClass.WIZARD.toString()))
-            return new Commander();
-        else if (type.equals(GameCharacterClass.OGRE.toString()))
-            return new Ogre();
-        else if (type.equals(GameCharacterClass.PAWN.toString()))
-            return new Pawn();
-        else
-            throw new Exception("GameCharacterClass " + type + " does not exist");
+        switch(type) {
+            case "KNIGHT":
+                return new Knight();
+            case "COMMANDER":
+                return new Commander();
+            case "TROLL":
+                return new Troll();
+            case "ARCHER":
+                return new Archer();
+            case "WIZARD":
+                return new Wizard();
+            case "OGRE":
+                return new Ogre();
+            case "PAWN":
+                return new Pawn();
+            default:
+                throw new Exception("GameCharacterClass" + type + "does not exist");
+        }
     }
-
 }
